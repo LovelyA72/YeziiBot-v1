@@ -9,7 +9,7 @@
 #
 
 ## Manager's QQ ID goes here
-$wgUserID = "2927103357";
+$wgUserID = "";
 
 ## The URL base path to the directory containing the YeziiBot;
 ## defaults for all runtime URL paths are based off of this.
