@@ -8,7 +8,7 @@ use CoolQSDK\CoolQSDK;
 
 $message = null;
 
-$CoolQ = new CoolQSDK('127.0.0.1',5700,'dce7350cb9f2cb98550141029cdf77ba');
+$CoolQ = new CoolQSDK('127.0.0.1',5700,'yourtokenhere');
 
 $recv = json_decode(file_get_contents('php://input'), true);
 
