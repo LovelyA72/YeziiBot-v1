@@ -8,6 +8,9 @@
 # 与YeZiiBot玩得开心~
 #
 
+## YeziiBot's name. e.g. 何小绫
+$wgBotName = "";
+
 ## Manager's QQ ID goes here
 $wgUserID = "";
 
