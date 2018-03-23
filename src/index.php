@@ -7,7 +7,7 @@ require_once 'tools.php';
 use CoolQSDK\CoolQSDK;
 
 if($wgBotName==NULL){
-  $wgBotName=="YeziiBot";
+  $wgBotName="YeziiBot";
 }
 
 $message = null;
