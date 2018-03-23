@@ -6,6 +6,10 @@ require_once 'tools.php';
 
 use CoolQSDK\CoolQSDK;
 
+if($wgBotName==NULL){
+  $wgBotName=="YeziiBot";
+}
+
 $message = null;
 
 $CoolQ = new CoolQSDK('127.0.0.1',5700,'yourtokenhere');
