@@ -1,6 +1,6 @@
 <?php
 if(!$isMe){
-	//die();
+	die();
 }
 if($fromGroup){
 $CoolQ->sendGroupMsg($group, $argv[0]);
