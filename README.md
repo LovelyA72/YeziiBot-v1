@@ -5,7 +5,7 @@ YeziiBot是一个基于[kjBot](https://github.com/kj415j45/kjBot)框架核心制
 请注意：您需要一个酷Q(非自由软件) +http接口才能运行这些脚本！
 
 ## 运行要求
-1. CoolQ Air/Pro
+1. CoolQ Air/Pro(非自由软件)
 2. nginx>=1.10
 3. PHP>=7.0
 4. CoolQ-http-api
