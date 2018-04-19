@@ -11,6 +11,9 @@
 ## YeziiBot's name. e.g. 何小绫
 $wgBotName = "";
 
+## YeziiBot's server ID
+$wgServerID = "undefined";
+
 ## Manager's QQ ID goes here
 $wgUserID = "";
 
@@ -18,9 +21,7 @@ $wgUserID = "";
 ## defaults for all runtime URL paths are based off of this.
 $wgScriptPath = "";
 
-
 #custom settings
-
 ##Maximum number that can be roll out.
 $wgMaxRoll = 3000;
 

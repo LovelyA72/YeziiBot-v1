@@ -6,16 +6,11 @@ require_once 'tools.php';
 
 use CoolQSDK\CoolQSDK;
 
-if($wgBotName==NULL){
-  $wgBotName="YeziiBot";
-}
-
 $message = null;
 
-$CoolQ = new CoolQSDK('127.0.0.1',5700,'yourtokenhere');
+$CoolQ = new CoolQSDK('127.0.0.1',5700,'<your token here>');
 
 $recv = json_decode(file_get_contents('php://input'), true);
-
 
 //将消息解码成原始字符串
 $recvMsg = html_entity_decode($recv['message']);
@@ -66,6 +61,4 @@ if($sendBack){
 }else if($sendPM){
   $CoolQ->sendPrivateMsg($sender, $message);
 }
-
-//$CoolQ->sendPrivateMsg($sender, $message);
 ?>

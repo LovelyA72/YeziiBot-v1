@@ -144,16 +144,11 @@ function getRamTotal()
         // KB RAM Total
         return (int) $result;
     }
-$sapi =  php_sapi_name();
-if (substr($sapi, 0, 3) == 'cgi') {
-    $mode= "CGI-FCGI";
-} else {
-    $mode= "Unknown";
-}
 $message = "YeziiBot system status
-CPU: " . getCpuLoadPercentage() . " out of 100
-RAM total: " . round(getRamTotal()/1048576,2) . "MByte
-RAM free: " . round(getRamFree()/1048576,2) . "MByte
-PHP: " . phpversion() . " " . $mode . "
+Server ID: {$wgServerID}
+CPU: " . getCpuLoadPercentage() . "%
+RAM total: " . round(getRamTotal()/1048576,2) . "MBytes
+RAM free: " . round(getRamFree()/1048576,2) . "MBytes
+PHP: " . phpversion() . " " . PHP_SAPI;
 $sendBack = true;
 ?>

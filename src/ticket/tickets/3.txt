@@ -1,4 +1,0 @@
-﻿Ticket #3
-Creator: 2927103357
-测试ticket
-这是一段测试的文字

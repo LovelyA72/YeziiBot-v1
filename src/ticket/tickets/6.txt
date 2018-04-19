@@ -1,4 +1,0 @@
-Ticket #6
-Creator: 2927103357
-reopen功能
-close的丢去close/文件夹，当做临时废弃（半忽略）
