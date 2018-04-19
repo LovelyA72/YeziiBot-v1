@@ -2,7 +2,7 @@
 
 YeziiBot是一个基于[kjBot](https://github.com/kj415j45/kjBot)框架核心制作的拥有实质功能的PHP QQ机器人。架构于[coolq-php-sdk](https://github.com/kilingzhang/coolq-php-sdk)。
 
-请注意：您需要一个酷Q+http接口才能运行这些脚本！
+请注意：您需要一个酷Q(非自由软件) +http接口才能运行这些脚本！
 
 ## 运行要求
 1. CoolQ Air/Pro
