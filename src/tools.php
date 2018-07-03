@@ -8,6 +8,30 @@ return preg_match("/{$QQ}/", $list);
 function whoisMe(){
 return file_get_contents(__DIR__.'/group/me.group');
 }
+function write_log($data){ 
+    $years = date('Y-m');
+    $url = '../../logs/'.$years.'/'.date('Ymd').'_request.log';  
+    $dir_name=dirname($url);
+      if(!file_exists($dir_name))
+      {
+       $res = mkdir(iconv("UTF-8", "GBK", $dir_name),0777,true);
+      }
+      $fp = fopen($url,"a");     
+    fwrite($fp,date("m.d h:i:s")." ".var_export($data,true)."\r\n");
+    fclose($fp);
+}
+function write_msg($data){ 
+    $years = date('Y-m');
+    $url = '../../logs/'.$years.'/'.date('Ymd').'_message.log';  
+    $dir_name=dirname($url);
+      if(!file_exists($dir_name))
+      {
+       $res = mkdir(iconv("UTF-8", "GBK", $dir_name),0777,true);
+      }
+      $fp = fopen($url,"a");     
+    fwrite($fp,date("m.d h:i:s")." ".var_export($data,true)."\r\n");
+    fclose($fp)
+}
 function dec_enc($string, $secret_key, $action) {
     $output = false;
  
