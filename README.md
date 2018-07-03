@@ -18,3 +18,6 @@ YeziiBot是一个基于kjBot框架核心制作的拥有实质功能的PHP QQ机�
 5. 将具有php功能nginx的root指向<你刚才创建的的php文件夹>/src并启动服务，建议使用一个非80或443的端口！
 6. 在coolq-http-api中的post_url配置项配置为<你的localhost(或者php服务器所在的IP地址)>:<nginx所在的端口>
 7. 玩的开心~
+
+## getProc.exe
+此程序的源代码会在我回国的时候公开（常用电脑不在身旁），请见谅
