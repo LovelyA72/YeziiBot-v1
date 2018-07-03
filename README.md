@@ -10,6 +10,16 @@ YeziiBot是一个基于kjBot框架核心制作的拥有实质功能的PHP QQ机�
 3. PHP>=7.0
 4. CoolQ-http-api
 
+## 文件夹结构
+```
+├─lib  库文件夹
+├─site web界面
+│  ├─pages Markdown文件存储位置
+│  ├─script API程序
+│  └─static 静态文件存储位置
+└─src  机器人处理程序
+```
+
 ## 如何安装
 1. 安装CoolQ Air或CoolQ Pro，并在其中安装并启用[CoolQ-http-api](https://github.com/richardchien/coolq-http-api).
 2. 在CoolQ的根目录（或者任意你喜欢的地方）创建一个文件夹，将YeziiBot的源码下载并完整的放进去.
