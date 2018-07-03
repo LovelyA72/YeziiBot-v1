@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
+  <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1.0'/>
+  <title>HeXiaoling QQ Bot</title>
+
+  <!-- CSS  -->
+  <link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'>
+  <link href='css/materialize.css' type='text/css' rel='stylesheet' media='screen,projection'/>
+  <link href='css/style.css' type='text/css' rel='stylesheet' media='screen,projection'/>
+  
+  <style>
+.Site {
+     display: flex;
+     display: -webkit-flex; /* Safari (But who will use it?)*/
+     min-height: 100vh;
+     flex-direction: column;
+ }
+
+.Site-content {
+    flex: 1;
+} 
+  </style>
+</head>
+<body class='Site'>
+  <nav class='light-blue lighten-1' role='navigation'>
+    <div class='nav-wrapper container'><a id='logo-container' href='#' class=''><font size="4">Xiaoling!bot</font></a>
+      <ul class='right hide-on-med-and-down'>
+        <li><a href='#about' data-target="about" class='modal-trigger'>About Xiaoling!bot</a></li>
+      </ul>
+    </div>
+</div>
+  </nav>
+  <div class='section no-pad-bot Site-content' id='index-banner'>
+    <div class='container'>
+      <br><br>
+      <h2 class='header orange-text'>System status</h2>
+      <div class='row'>
+        <h5 class='header col s12 light'>Just a simple way to see if HeXiaoling is running or not.</h5>
+		<h5 class='header col s12 light'>Right now...</h5>
+		<p id='ngxstat'>nginx: <font size='5' color='blue'>∎</font> If you can read this page withourt getting an error or a warning, then yes, nginx is running.</p>
+		<p id='corestat'>Bot kernel: <font size='5' color='orange'>∎</font> Checking...</p>
+		<h5 class='header col s12 light'>Today...</h5>
+		<p id='messagestat'>Message count: <font size='5' color='orange'>∎</font> Checking...</p>
+		<p id='commandstat'>Command count: <font size='5' color='orange'>∎</font> Checking...</p>
+		<script>
+window.onload=function(){
+$.get("proc.php","key=&proc=core", function(data){
+			if(data==1){
+				document.getElementById("corestat").innerHTML="Bot kernel: <font size='5' color='blue'>∎</font> Running!";
+			}else{
+				document.getElementById("corestat").innerHTML="Bot kernel: <font size='5' color='red'>∎</font> Error!";
+			}
+});
+$.get("api.php","func=statistics&item=message", function(data){
+		document.getElementById("messagestat").innerHTML="Message count: <font size='5' color='green'>∎</font> "+data+" Messages";
+});
+$.get("api.php","func=statistics&item=command", function(data){
+		document.getElementById("commandstat").innerHTML="Command count: <font size='5' color='green'>∎</font> "+data+" Commands";
+});
+setInterval(function(){
+$.get("api.php","func=statistics&item=message", function(data){
+		document.getElementById("messagestat").innerHTML="Message count: <font size='5' color='green'>∎</font> "+data+" Messages";
+});
+$.get("api.php","func=statistics&item=command", function(data){
+		document.getElementById("commandstat").innerHTML="Command count: <font size='5' color='green'>∎</font> "+data+" Commands";
+});
+},15000);
+}
+	</script>
+	<h5 class='header col s12 light'>Getting started...</h5>
+	<a class="waves-effect waves-light btn" href="/page/command_en">Command documentation</a><br/><br/>
+      </div>
+      <br><br>
+
+    </div>
+  </div>
+
+
+  <div class='container'>
+  
+  </div>
+  <div id='about' class='modal'>
+    <div class='modal-content'>
+      <h4>About Xiaoling!bot</h4>
+      <p>HeXiaoling is a character made by YzWiki</p>
+	  <p>Backend program: 2018 TEAM A72</p>
+	  <p>Web program: YzACG Web Dev team</p>
+    </div>
+    <div class='modal-footer'>
+      <a href='#!' class='modal-close waves-effect waves-green btn-flat'>OK</a>
+  </div>
+
+  <!--  Scripts-->
+  <script src='https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js'></script>
+  <script src='js/materialize.js'></script>
+  <script>
+  $(document).ready(function(){
+    $('.modal').modal();
+  });</script>
+  </body>
+</html>
