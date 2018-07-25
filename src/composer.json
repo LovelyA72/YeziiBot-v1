@@ -1,0 +1,23 @@
+{
+    "name": "slight-sky/coolq-sdk-php",
+    "type": "library",
+    "description": "sdk",
+    "keywords": ["coolq","library","sdk"],
+    "homepage": "https://slight-sky.github.io/",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "kilingzhang",
+            "email": "slight@kilingzhang.com",
+			"homepage" : "https://slight-sky.github.io/"    
+        }
+    ],
+    "require:": {
+        "php": ">=5.3"
+    },
+    "autoload": {
+        "psr-0": {
+            "CoolQ": "src/"
+        }
+    }
+}
