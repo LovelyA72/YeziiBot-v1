@@ -1,6 +1,12 @@
 <?php
 $min=1;
 $max=100;
+if($argv[0]=="mute"){
+	$rTextArr = array("1分钟","10分钟","10分钟","30分钟","60分钟","2小时","12小时","24小时");
+	$message = "禁言转盘... ".$rTextArr[rand(0,count($rTextArr)-1)]."!";
+	$sendBack = true;
+	return;
+}
 if($argv[0]=="text"){
 	$rTextArr = explode(",",$argv[1]);
 	//for($i = 0;$i<10;$i++){
